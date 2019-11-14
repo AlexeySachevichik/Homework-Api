@@ -1,0 +1,25 @@
+{
+  "name": "homework-bicycles-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexeySachevichik/Homework-Bicycles-Api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexeySachevichik/Homework-Bicycles-Api/issues"
+  },
+  "homepage": "https://github.com/AlexeySachevichik/Homework-Bicycles-Api#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.4"
+  }
+}
