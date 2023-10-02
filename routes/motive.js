@@ -30,14 +30,14 @@ router.post('/cables/search', jsonParser, function(request, response) {
     ]`;
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
-    else response.status(200).send( res(request, 200, result));
+    else response.status(200).send(result);
 });
 
 router.post('/cables/search/check', jsonParser, function(request, response) {
     log('', JSON.stringify(request.body));
-    let result =request.body;
+    let result = request.body;
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
-    else response.status(200).send( res(request, 200, result));
+    else response.status(200).send(result);
 });
 
 // Example 1 (single cable found)
@@ -66,7 +66,7 @@ router.post('/cables/search/1', jsonParser, function(request, response) {
     ]`;
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
-    else response.status(200).send( res(request, 200, result));
+    else response.status(200).send(result);
 });
 
 // Example 2 (multiple cables found - all are required)
@@ -99,7 +99,7 @@ router.post('/cables/search/2', jsonParser, function(request, response) {
     ]`;
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
-    else response.status(200).send( res(request, 200, result));
+    else response.status(200).send(result);
 });
 
 // Example 3 (no cables found)
@@ -116,7 +116,7 @@ router.post('/cables/search/3', jsonParser, function(request, response) {
     ]`;
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
-    else response.status(200).send( res(request, 200, result));
+    else response.status(200).send(result);
 });
 
 // Example 4 (Multiple input vehicles - mixed results)
@@ -160,7 +160,7 @@ router.post('/cables/search/4', jsonParser, function(request, response) {
     ]`;
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
-    else response.status(200).send( res(request, 200, result));
+    else response.status(200).send(result);
 });
 
 // Example 5 (multiple cables found - only one is required)
@@ -193,7 +193,7 @@ router.post('/cables/search/5', jsonParser, function(request, response) {
     ]`;
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
-    else response.status(200).send( res(request, 200, result));
+    else response.status(200).send(result);
 });
 
 // Returns a list of all available makes for vehicles
@@ -205,7 +205,7 @@ router.get('/cables/vehicles/makes', function(request, response) {
         "Volvo"
     ]`;
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
-    else response.status(200).send(res(request, 200, result));
+    else response.status(200).send(result);
 });
 
 // Retrieves the unique truck models for a given make.
@@ -215,7 +215,7 @@ router.get('/cables/vehicles/kenworth/models', function(request, response) {
         "Kenworth - W990"
     ]`;
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
-    else response.status(200).send(res(request, 200, result));
+    else response.status(200).send(result);
 });
 router.get('/cables/vehicles/ford/models', function(request, response) {
     let result = `[
@@ -224,7 +224,7 @@ router.get('/cables/vehicles/ford/models', function(request, response) {
         "Ford - H345",
     ]`;
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
-    else response.status(200).send(res(request, 200, result));
+    else response.status(200).send(result);
 });
 router.get('/cables/vehicles/freightliner/models', function(request, response) {
     let result = `[
@@ -234,7 +234,7 @@ router.get('/cables/vehicles/freightliner/models', function(request, response) {
         "Freightliner - L233",
     ]`;
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
-    else response.status(200).send(res(request, 200, result));
+    else response.status(200).send(result);
 });
 router.get('/cables/vehicles/volvo/models', function(request, response) {
     let result = `[
@@ -244,7 +244,7 @@ router.get('/cables/vehicles/volvo/models', function(request, response) {
         "Volvo - L233",
     ]`;
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
-    else response.status(200).send(res(request, 200, result));
+    else response.status(200).send(result);
 });
 
 // Each time when the Cable selection flow is triggered, Salesforce sends a REST API request
@@ -286,7 +286,7 @@ router.get('/cables/vehicles', function(request, response) {
         },
     ]`;
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
-    else response.status(200).send(res(request, 200, result));
+    else response.status(200).send(result);
 });
 
 module.exports = router;
