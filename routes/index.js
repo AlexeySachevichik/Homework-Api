@@ -7,6 +7,7 @@ const res = require('../utils/res');
 const list = require('./list');
 const random = require('./random');
 const generate = require('./generate');
+const motive = require('./motive');
 
 //
 //  API
@@ -37,6 +38,7 @@ module.exports = function(app) {
   app.use('/list', list);
   app.use('/random', random);
   app.use('/generate', generate);
+  app.use('/motive', motive);
 
   // NOT FOUND ROUTE
 	app.all('*', (request, response) => {
