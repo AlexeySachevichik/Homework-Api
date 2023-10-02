@@ -8,7 +8,7 @@ const res = require('../utils/res');
 router.post('/cables/search', jsonParser, function(request, response) {
     log('', JSON.stringify(request.body));
 
-    let result = `[
+    let result = [
         {
             "result_code" : 1200,
             "result_message" : "cables found",
@@ -27,7 +27,7 @@ router.post('/cables/search', jsonParser, function(request, response) {
                 "notes" : "Cable-3003 supports the circular threaded/hex nut mount style of 9-pin connector."
             }
         }
-    ]`;
+    ];
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
     else response.status(200).send(result);
@@ -44,7 +44,7 @@ router.post('/cables/search/check', jsonParser, function(request, response) {
 router.post('/cables/search/1', jsonParser, function(request, response) {
     log('', JSON.stringify(request.body));
 
-    let result = `[
+    let result = [
         {
             "result_code" : 1200,
             "result_message" : "cables found",
@@ -63,7 +63,7 @@ router.post('/cables/search/1', jsonParser, function(request, response) {
                 "notes" : "Cable-3003 supports the circular threaded/hex nut mount style of 9-pin connector."
             }
         }
-    ]`;
+    ];
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
     else response.status(200).send(result);
@@ -73,7 +73,7 @@ router.post('/cables/search/1', jsonParser, function(request, response) {
 router.post('/cables/search/2', jsonParser, function(request, response) {
     log('', JSON.stringify(request.body));
 
-    let result = `[
+    let result = [
         {
             "result_code" : 1200,
             "result_message" : "cables found",
@@ -96,7 +96,7 @@ router.post('/cables/search/2', jsonParser, function(request, response) {
                 "notes" : "Cable-3003 supports the circular threaded/hex nut mount style of 9-pin connector."
             }
         }
-    ]`;
+    ];
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
     else response.status(200).send(result);
@@ -106,14 +106,14 @@ router.post('/cables/search/2', jsonParser, function(request, response) {
 router.post('/cables/search/3', jsonParser, function(request, response) {
     log('', JSON.stringify(request.body));
 
-    let result = `[
+    let result = [
         {
             "result_code" : 1401,
             "result_message" : "Cable not found - invalid vin",
             "vin" : "JF1GPAA63DH868722",
             "cable_info" : null
         }
-    ]`;
+    ];
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
     else response.status(200).send(result);
@@ -123,7 +123,7 @@ router.post('/cables/search/3', jsonParser, function(request, response) {
 router.post('/cables/search/4', jsonParser, function(request, response) {
     log('', JSON.stringify(request.body));
 
-    let result = `[
+    let result = [
         {
             "result_code" : 1200,
             "result_message" : "cables found",
@@ -157,7 +157,7 @@ router.post('/cables/search/4', jsonParser, function(request, response) {
             "VIN" : "JF1GPAA63DH868722",
             "cable_info" : null
         }
-    ]`;
+    ];
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
     else response.status(200).send(result);
@@ -167,7 +167,7 @@ router.post('/cables/search/4', jsonParser, function(request, response) {
 router.post('/cables/search/5', jsonParser, function(request, response) {
     log('', JSON.stringify(request.body));
 
-    let result = `[
+    let result = [
         {
             "result_code" : 1200,
             "result_message" : "cables found",
@@ -190,7 +190,7 @@ router.post('/cables/search/5', jsonParser, function(request, response) {
                 "notes" : "Cable-3003 supports the circular threaded/hex nut mount style of 9-pin connector."
             }
         }
-    ]`;
+    ];
 
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number: Incorrect attributes`));
     else response.status(200).send(result);
@@ -198,51 +198,51 @@ router.post('/cables/search/5', jsonParser, function(request, response) {
 
 // Returns a list of all available makes for vehicles
 router.get('/cables/vehicles/makes', function(request, response) {
-    let result = `[
+    let result = [
         "Kenworth",
         "Ford",
         "Freightliner",
         "Volvo"
-    ]`;
+    ];
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
     else response.status(200).send(result);
 });
 
 // Retrieves the unique truck models for a given make.
 router.get('/cables/vehicles/kenworth/models', function(request, response) {
-    let result = `[
+    let result = [
         "Kenworth - T680",
         "Kenworth - W990"
-    ]`;
+    ];
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
     else response.status(200).send(result);
 });
 router.get('/cables/vehicles/ford/models', function(request, response) {
-    let result = `[
+    let result = [
         "Ford - T680",
         "Ford - W990",
         "Ford - H345",
-    ]`;
+    ];
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
     else response.status(200).send(result);
 });
 router.get('/cables/vehicles/freightliner/models', function(request, response) {
-    let result = `[
+    let result = [
         "Freightliner - T680",
         "Freightliner - W990",
         "Freightliner - H345",
         "Freightliner - L233",
-    ]`;
+    ];
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
     else response.status(200).send(result);
 });
 router.get('/cables/vehicles/volvo/models', function(request, response) {
-    let result = `[
+    let result = [
         "Volvo - T680",
         "Volvo - W990",
         "Volvo - H345",
         "Volvo - L233",
-    ]`;
+    ];
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
     else response.status(200).send(result);
 });
@@ -250,7 +250,7 @@ router.get('/cables/vehicles/volvo/models', function(request, response) {
 // Each time when the Cable selection flow is triggered, Salesforce sends a REST API request
 // to this method in the Cable Tool Service to receive a list of available Makes and Models
 router.get('/cables/vehicles', function(request, response) {
-    let result = `[
+    let result = [
         {
             "make" : "Kenworth",
             "models" : [
@@ -284,7 +284,7 @@ router.get('/cables/vehicles', function(request, response) {
                 "Volvo - L233",
             ]
         },
-    ]`;
+    ];
     if (result === false) response.status(200).send(res(request, 500, `Couldn't get a random number`));
     else response.status(200).send(result);
 });
