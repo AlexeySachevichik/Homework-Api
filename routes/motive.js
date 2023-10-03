@@ -21,7 +21,7 @@ router.get('/cables/vehicles', (request, response) => {
             response.status(200).send(result.data);
         })
         .catch((error) => {
-            response.status(200).send(res(request, 500, error));
+            response.status(400).send(res(request, 500, error));
         });
 });
 
@@ -39,7 +39,7 @@ router.post('/cables/search', jsonParser, (request, response) => {
             response.status(200).send(result.data);
         })
         .catch((error) => {
-            response.status(200).send(res(request, 500, error));
+            response.status(400).send(res(request, 500, error));
         });
 });
 
